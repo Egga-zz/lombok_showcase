@@ -1,4 +1,4 @@
-java_blank_maven
+Lombok Showcase
 ================
 
-some empty maven project to quick start coding
+Some room for experimentation with the Lombok library
