@@ -26,8 +26,8 @@ public class CustomerTest {
         Customer customer = new Customer();
 
         customer.setId(randomUUID());
-        customer.setName("some name");
-        customer.setEmail("e@mail.com");
+        customer.setName("Raj Koothrappali");
+        customer.setEmail("raj@bigbang.tv");
     }
 
     @Test
@@ -35,6 +35,14 @@ public class CustomerTest {
         Customer customer = new Customer();
 
         assertThat(customer.toString(), is(equalTo("Customer(id=null, name=null, email=null)")));
+    }
+
+    @Test
+    public void shouldAddEquals() {
+        Customer one = Customer.builder().name("Elmo").build();
+        Customer another = Customer.builder().name("Elmo").build();
+
+        assertThat(one, is(equalTo(another)));
     }
 
     @Test
