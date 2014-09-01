@@ -13,6 +13,16 @@ import static org.hamcrest.Matchers.is;
 public class CustomerTest {
 
     @Test
+    public void shouldHaveEmptyConstructor() {
+        new Customer();
+    }
+
+    @Test
+    public void shouldHaveCompleteConstructor() {
+        new Customer(randomUUID(), "some name", "heisenberg@meth-labs.org");
+    }
+
+    @Test
     public void shouldAddGetterMethods() {
         Customer customer = new Customer();
 
@@ -53,4 +63,5 @@ public class CustomerTest {
                 .email("vader@empire.gov")
                 .build();
     }
+
 }
