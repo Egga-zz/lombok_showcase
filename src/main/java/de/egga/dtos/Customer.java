@@ -1,11 +1,12 @@
 package de.egga.dtos;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.Builder;
 
 import java.util.UUID;
+
+import static java.util.UUID.randomUUID;
 
 
 /**
@@ -15,7 +16,6 @@ import java.util.UUID;
 @Data
 @Builder
 @NoArgsConstructor
-@AllArgsConstructor
 public class Customer {
 
     private UUID id;
@@ -24,4 +24,17 @@ public class Customer {
 
     private String email;
 
+    public Customer (final UUID id, final String name, final String email) {
+        this.id = id;
+        this.name = name;
+        this.email = email;
+    }
+
+    public static Customer customer() {
+        return builder()
+                .id(randomUUID())
+                .name("some name")
+                .email("me@mail.com")
+                .build();
+    }
 }
