@@ -75,4 +75,10 @@ public class CustomerTest {
         assertThat(customer.getName(), is(notNullValue()));
         assertThat(customer.getEmail(), is(notNullValue()));
     }
+
+    @Test(expectedExceptions = IllegalArgumentException.class)
+    public void shouldAllowOwnImplementations() {
+        Customer customer = new Customer();
+        customer.setEmail("no mail");
+    }
 }

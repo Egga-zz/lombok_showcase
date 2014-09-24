@@ -28,5 +28,10 @@ public class Customer {
         this.email = email;
     }
 
-
+    public void setEmail (final String email) {
+        if (!email.contains("@")) {
+            throw new IllegalArgumentException();
+        }
+        this.email = email;
+    }
 }
