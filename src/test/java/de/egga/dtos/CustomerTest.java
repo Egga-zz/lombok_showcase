@@ -44,13 +44,6 @@ public class CustomerTest {
     }
 
     @Test
-    public void shouldImplementToString() {
-        Customer customer = new Customer();
-
-        assertThat(customer.toString(), is(equalTo("Customer(id=null, name=null, email=null)")));
-    }
-
-    @Test
     public void shouldAddEquals() {
         Customer one = builder().name("Elmo").build();
         Customer another = builder().name("Elmo").build();
