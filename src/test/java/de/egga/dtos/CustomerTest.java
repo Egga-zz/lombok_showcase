@@ -3,7 +3,7 @@ package de.egga.dtos;
 import org.testng.annotations.Test;
 
 import static de.egga.dtos.Customer.builder;
-import static de.egga.dtos.Customer.customer;
+import static de.egga.dtos.CustomerFactory.customer;
 import static java.util.UUID.randomUUID;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;

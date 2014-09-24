@@ -6,8 +6,6 @@ import lombok.experimental.Builder;
 
 import java.util.UUID;
 
-import static java.util.UUID.randomUUID;
-
 
 /**
  * @author egga
@@ -30,11 +28,5 @@ public class Customer {
         this.email = email;
     }
 
-    public static Customer customer() {
-        return builder()
-                .id(randomUUID())
-                .name("some name")
-                .email("me@mail.com")
-                .build();
-    }
+
 }
